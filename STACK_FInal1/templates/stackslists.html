@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STACK LIST OPERATION</title>
+    <link rel="stylesheet" href="{{url_for('static', filename=css/main.css)}}">
+</head>
+<body>
+    <style>
+
+    </style>
+    <header>
+        <nav>
+            <h1>STACK LIST OPERATION</h1>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="operation">
+            <form method="POST" action="{{ url_for('update') }}">
+                <!-- Form fields like operation selection and data input -->
+                <label for="data">Enter Your Data:</label>
+                <input type="text" id="data" name="data" placeholder="Enter data (if needed)">
+            
+                <button type="submit" name="operation" value="push">Push</button>
+                <button type="submit" name="operation" value="pop">Pop</button>
+                <button type="submit" name="operation" value="peek">Peek</button>
+                <button type="submit" name="operation" value="is_empty">Is Empty</button>
+            </form>
+                </div>
+
+                <ul>
+                    <div class="works_text_pos">
+                    <li><a href=""> Back to Works</a></li>
+                    </div>
+                </ul>
+            </form>
+        </section>
+
+        <section class="Stacklist">
+            <h2>Current Stack List:</h2>
+            <ul>
+                {% for item in stacklist %}
+                    <li>{{ item }}</li>
+                {% endfor %}
+            </ul>
+            {% if result is not none %}
+                <p>Result: {{ result }}</p>
+            {% endif %}
+            <a href="/stackslists">Back to Stack Operations</a>
+        </body>
+        </html>
+</body>
+</html>
+
